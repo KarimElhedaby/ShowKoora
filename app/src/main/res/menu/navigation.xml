@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_world"
+        android:icon="@drawable/local_news"
+        android:title=" أخبار عالميه" />
+
+    <item
+        android:id="@+id/navigation_local"
+        android:icon="@drawable/world_news"
+        android:title="أخبار محليه " />
+
+</menu>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ka.com.showkoora">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/showkora"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/showkora"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplachActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/title_activity_home" />
+        <activity
+            android:name=".localnews.WorldNewsFragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".worldnews.Local_NewsFragment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".NewDetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".MainActivity"></activity>
+    </application>
+
+</manifest>
