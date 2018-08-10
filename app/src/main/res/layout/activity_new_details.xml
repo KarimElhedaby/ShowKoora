@@ -85,7 +85,6 @@
                     android:layout_marginEnd="4dp"
                     android:layout_marginStart="4dp"
                     android:layout_marginTop="4dp"
-                    android:scaleType="centerCrop"
                     android:src="@drawable/m" />
 
 
@@ -99,7 +98,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
-            android:gravity="center"
+            android:gravity="start"
             android:layoutDirection="ltr"
             android:padding="2dp"
             android:text="riad mehrez move kfekfjjdkfdjksdjfklsdks lfjehfhfddnf jjlnsdlfnlndnfnkdnfklndlknfns n ldsnflsdnfnnkfdnknkfnkankfn naknfnfsnnaklanav nfwwn fnkn nfkn nkfnkfnknk nn klnknk nk nklnkfsnknkasnkanknfksn anfnaf n fanfknfnskn flnanv bg bs g v"

@@ -7,26 +7,26 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_settings">Settings</string>
+    <string name="title_activity_settings">الاعدادت</string>
 
     <!-- Strings related to Settings -->
 
     <!-- Example General settings -->
-    <string name="pref_header_general">General</string>
+    <string name="pref_header_general">عام</string>
 
-    <string name="pref_title_social_recommendations">Enable social recommendations</string>
-    <string name="pref_description_social_recommendations">Recommendations for people to contact
-        based on your message history
+    <string name="pref_title_social_recommendations">تمكين التوصيات الاجتماعية</string>
+    <string name="pref_description_social_recommendations">توصيات للناس للاتصال بهم
+         على أساس تاريخ الرسالة الخاصة بك
     </string>
 
-    <string name="pref_title_display_name">Display name</string>
-    <string name="pref_default_display_name">John Smith</string>
+    <string name="pref_title_display_name">اسم الظهور</string>
+    <string name="pref_default_display_name">Show Koora</string>
 
-    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string name="pref_title_add_friends_to_messages">اضافه اصدقاء الى الرسائل</string>
     <string-array name="pref_example_list_titles">
-        <item>Always</item>
-        <item>When possible</item>
-        <item>Never</item>
+        <item>دائما</item>
+        <item>عندما يكون متاح</item>
+        <item>مستحيل</item>
     </string-array>
     <string-array name="pref_example_list_values">
         <item>1</item>
@@ -35,9 +35,9 @@
     </string-array>
 
     <!-- Example settings for Data & Sync -->
-    <string name="pref_header_data_sync">Data &amp; sync</string>
+    <string name="pref_header_data_sync">المزامنه &amp; البيانات</string>
 
-    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string name="pref_title_sync_frequency">التزامن</string>
     <string-array name="pref_sync_frequency_titles">
         <item>15 minutes</item>
         <item>30 minutes</item>
@@ -69,19 +69,20 @@
 
     <string-array name="multi_select_list_preference_default_value" />
 
-    <string name="pref_title_system_sync_settings">System sync settings</string>
+    <string name="pref_title_system_sync_settings">إعدادات مزامنة النظام</string>
 
     <!-- Example settings for Notifications -->
-    <string name="pref_header_notifications">Notifications</string>
+    <string name="pref_header_notifications">اشعارات</string>
 
-    <string name="pref_title_new_message_notifications">New message notifications</string>
+    <string name="pref_title_new_message_notifications">استلام اشعارات للرسائل الجديده</string>
 
-    <string name="pref_title_ringtone">Ringtone</string>
-    <string name="pref_ringtone_silent">Silent</string>
+    <string name="pref_title_ringtone">نغمه الرنين</string>
+    <string name="pref_ringtone_silent">صامت</string>
 
     <string name="pref_title_vibrate">Vibrate</string>
 
     <string name="group_name">Group 1</string>
     <string name="notifications_admin_channel_name">Global channel</string>
     <string name="notifications_admin_channel_description">Notifications sent from the app admin</string>
+    <string name="pref_title_vibrate">هزاز</string>
 </resources>
