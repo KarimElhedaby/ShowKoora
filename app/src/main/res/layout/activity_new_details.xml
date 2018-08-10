@@ -23,7 +23,7 @@
             android:layoutDirection="ltr"
             android:padding="2dp"
             android:text="riad mehrez move"
-            android:textColor="@color/colorAccent"
+            android:textColor="#FFF"
             android:textSize="18sp" />
 
         <LinearLayout
@@ -105,6 +105,19 @@
             android:text="riad mehrez move kfekfjjdkfdjksdjfklsdks lfjehfhfddnf jjlnsdlfnlndnfnkdnfklndlknfns n ldsnflsdnfnnkfdnknkfnkankfn naknfnfsnnaklanav nfwwn fnkn nfkn nkfnkfnknk nn klnknk nk nklnkfsnknkasnkanknfksn anfnaf n fanfknfnskn flnanv bg bs g v"
             android:textColor="#fff"
             android:textSize="18sp" />
+
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-7647915106985195/9319791713">
+        </com.google.android.gms.ads.AdView>
+
 
     </LinearLayout>
 </ScrollView>

@@ -5,6 +5,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import ka.com.showkoora.localnews.WorldNewsFragment
 import ka.com.showkoora.worldnews.Local_NewsFragment
 import kotlinx.android.synthetic.main.activity_main.*
@@ -14,7 +18,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        supportActionBar?.setIcon(R.drawable.showkora)
         setSupportActionBar(toolbar)
+
+
+        MobileAds.initialize(this, "ca-app-pub-7647915106985195~9847131670")
+
+       val adRequest = AdRequest.Builder().build()
+       adView.loadAd(adRequest)
+
 
         WorldIV.setOnClickListener {
             startActivity(Intent(this, WorldNewsFragment::class.java))

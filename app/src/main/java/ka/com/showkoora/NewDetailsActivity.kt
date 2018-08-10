@@ -9,6 +9,10 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.bumptech.glide.Glide
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdSize
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_new_details.*
 import java.io.File
 import java.io.FileOutputStream
@@ -18,6 +22,11 @@ class NewDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_details)
+
+        MobileAds.initialize(this, "ca-app-pub-7647915106985195~9847131670")
+
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
 
 
         var new: New = New(intent.getStringExtra("title"),
