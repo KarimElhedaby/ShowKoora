@@ -3,9 +3,7 @@ package ka.com.showkoora.worldnews
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,8 +15,9 @@ import ka.com.showkoora.New
 import ka.com.showkoora.NewDetailsActivity
 import ka.com.showkoora.R
 import ka.com.showkoora.adapter.newsAdapter
-import kotlinx.android.synthetic.main.fragment_local__news.*
 import kotlinx.android.synthetic.main.fragment_local__news.view.*
+import kotlinx.android.synthetic.main.fragment_local__news.*
+
 
 class Local_NewsFragment : Fragment(), newsAdapter.NewsClick {
 
@@ -45,8 +44,8 @@ class Local_NewsFragment : Fragment(), newsAdapter.NewsClick {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
-        // Inflate the layfragment
-        var view: View = inflater.inflate(R.layout.fragment_world_news, container, false)
+        //  Inflate the layfragment
+        var view: View = inflater.inflate(R.layout.fragment_local__news, container, false)
 
         view.localnewsPB.visibility = View.VISIBLE
 
@@ -57,7 +56,7 @@ class Local_NewsFragment : Fragment(), newsAdapter.NewsClick {
 
             override fun onDataChange(p0: DataSnapshot?) {
 
-               view.localnewsPB.visibility = View.GONE
+                view.localnewsPB.visibility = View.GONE
 
                 for (c in p0?.children!!) {
                     new = c.getValue(New::class.java)!!

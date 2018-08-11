@@ -39,12 +39,12 @@
 
     <string name="pref_title_sync_frequency">التزامن</string>
     <string-array name="pref_sync_frequency_titles">
-        <item>15 minutes</item>
-        <item>30 minutes</item>
-        <item>1 hour</item>
-        <item>3 hours</item>
-        <item>6 hours</item>
-        <item>Never</item>
+        <item>15 دقيقه</item>
+        <item>30 دقيقه</item>
+        <item>1 ساعه</item>
+        <item>3 ساعات</item>
+        <item>6 ساعات</item>
+        <item>ابدا</item>
     </string-array>
     <string-array name="pref_sync_frequency_values">
         <item>15</item>
@@ -79,7 +79,6 @@
     <string name="pref_title_ringtone">نغمه الرنين</string>
     <string name="pref_ringtone_silent">صامت</string>
 
-    <string name="pref_title_vibrate">Vibrate</string>
 
     <string name="group_name">Group 1</string>
     <string name="notifications_admin_channel_name">Global channel</string>

@@ -6,6 +6,7 @@ import android.content.Context
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
+import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
@@ -14,15 +15,26 @@ import com.google.android.gms.ads.MobileAds
 import com.onesignal.OneSignal
 import ka.com.showkoora.localnews.WorldNewsFragment
 import ka.com.showkoora.worldnews.Local_NewsFragment
+import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_main.*
 
 open class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_home)
         supportActionBar?.setIcon(R.drawable.showkora)
         setSupportActionBar(toolbar)
+
+        supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.cointainer,
+                        WorldNewsFragment.newInstance())
+                .addToBackStack(null)
+                .commit()
+
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+
 
 
         OneSignal.startInit(this)
@@ -60,17 +72,17 @@ open class MainActivity : AppCompatActivity() {
         MobileAds.initialize(this, "ca-app-pub-7647915106985195~9847131670")
 
         val adRequest = AdRequest.Builder().build()
-        adView.loadAd(adRequest)
+        adViewV.loadAd(adRequest)
 
 
-        WorldIV.setOnClickListener {
+       /* WorldIV.setOnClickListener {
             startActivity(Intent(this, WorldNewsFragment::class.java))
         }
 
         cityIV.setOnClickListener {
             startActivity(Intent(this, Local_NewsFragment::class.java))
 
-        }
+        }*/
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -98,5 +110,32 @@ open class MainActivity : AppCompatActivity() {
     companion object {
         var isAppRunning: Boolean = false
 
+    }
+
+
+    private val mOnNavigationItemSelectedListener = BottomNavigationView.OnNavigationItemSelectedListener { item ->
+        when (item.itemId) {
+            R.id.navigation_world -> {
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.cointainer,
+                                WorldNewsFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit()
+                return@OnNavigationItemSelectedListener true
+            }
+
+            R.id.navigation_local -> {
+                supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.cointainer,
+                                Local_NewsFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit()
+                return@OnNavigationItemSelectedListener true
+            }
+
+        }
+        false
     }
 }

@@ -26,12 +26,6 @@
             android:name=".HomeActivity"
             android:label="@string/title_activity_home" />
         <activity
-            android:name=".localnews.WorldNewsFragment"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".worldnews.Local_NewsFragment"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity android:name=".NewDetailsActivity"
