@@ -39,10 +39,15 @@ class Local_NewsFragment : AppCompatActivity(), newsAdapter.NewsClick {
                 for (c in p0?.children!!) {
                     new = c.getValue(New::class.java)!!
                     news.add(new)
-                    localnewsRV.layoutManager = GridLayoutManager(this@Local_NewsFragment, 1)
-//                    localnewsRV.layoutManager = LinearLayoutManager(this@Local_NewsFragment, LinearLayoutManager.VERTICAL,true)
-                    localnewsRV.adapter = this@Local_NewsFragment.let { newsAdapter(it, news, this@Local_NewsFragment) }
+
                 }
+
+                var reverseNews : ArrayList<List<New>> = arrayListOf(news.reversed())
+
+                localnewsRV.layoutManager = GridLayoutManager(this@Local_NewsFragment, 1)
+//                    localnewsRV.layoutManager = LinearLayoutManager(this@Local_NewsFragment, LinearLayoutManager.VERTICAL,true)
+                localnewsRV.adapter = this@Local_NewsFragment.let { newsAdapter(it, reverseNews[0], this@Local_NewsFragment) }
+
             }
         })
     }

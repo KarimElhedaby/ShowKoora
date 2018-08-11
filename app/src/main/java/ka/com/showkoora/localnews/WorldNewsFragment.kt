@@ -49,11 +49,16 @@ class WorldNewsFragment : AppCompatActivity(), newsAdapter.NewsClick {
                 for (c in p0?.children!!) {
                     new = c.getValue(New::class.java)!!
                     news.add(new)
-                    worldnewsRV.layoutManager = GridLayoutManager(this@WorldNewsFragment, 1)
+
+                }
+                var reverseNews : ArrayList<List<New>> = arrayListOf(news.reversed())
+
+
+
+                worldnewsRV.layoutManager = GridLayoutManager(this@WorldNewsFragment, 1)
 
 //                    worldnewsRV.layoutManager = LinearLayoutManager(this@WorldNewsFragment, LinearLayoutManager.VERTICAL,true)
-                    worldnewsRV.adapter = this@WorldNewsFragment.let { newsAdapter(it, news, this@WorldNewsFragment) }
-                }
+                worldnewsRV.adapter = this@WorldNewsFragment.let { newsAdapter(it, reverseNews[0], this@WorldNewsFragment) }
             }
 
         })

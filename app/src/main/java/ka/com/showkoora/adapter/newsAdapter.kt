@@ -19,7 +19,7 @@ import java.io.File
 import java.io.FileOutputStream
 import java.util.*
 
-class newsAdapter(var context: Context, var news: ArrayList<New>, var newsListener: NewsClick) : RecyclerView.Adapter<newsVH>() {
+class newsAdapter(var context: Context, var news: List<New>, var newsListener: NewsClick) : RecyclerView.Adapter<newsVH>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): newsVH {
