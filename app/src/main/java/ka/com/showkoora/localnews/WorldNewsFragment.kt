@@ -17,6 +17,9 @@ import ka.com.showkoora.R
 import ka.com.showkoora.adapter.newsAdapter
 import kotlinx.android.synthetic.main.fragment_world_news.*
 import kotlinx.android.synthetic.main.fragment_world_news.view.*
+import android.support.v7.widget.RecyclerView
+import kotlinx.android.synthetic.main.activity_home.*
+
 
 class WorldNewsFragment : Fragment(), newsAdapter.NewsClick {
 
@@ -67,6 +70,8 @@ class WorldNewsFragment : Fragment(), newsAdapter.NewsClick {
 
                 view.worldnewsRV.layoutManager = GridLayoutManager(context, 1)
                 view.worldnewsRV.adapter = this@WorldNewsFragment.let { newsAdapter(context!!.applicationContext, reverseNews[0], this@WorldNewsFragment) }
+
+
             }
 
         })

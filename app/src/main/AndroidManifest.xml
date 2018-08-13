@@ -22,15 +22,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".HomeActivity"
-            android:label="@string/title_activity_home" />
+        <!--<activity-->
+            <!--android:name=".HomeActivity"-->
+            <!--android:label="@string/title_activity_home" />-->
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" />
         <activity android:name=".NewDetailsActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
 
 
     </application>

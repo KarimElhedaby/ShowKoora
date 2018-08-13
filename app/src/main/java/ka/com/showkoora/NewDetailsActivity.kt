@@ -10,8 +10,6 @@ import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.bumptech.glide.Glide
 import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.AdSize
-import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_new_details.*
 import java.io.File
@@ -22,6 +20,10 @@ class NewDetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_details)
+
+        action_settings.setOnClickListener {
+            startActivity(Intent(this@NewDetailsActivity, SettingsActivity::class.java))
+        }
 
         MobileAds.initialize(this, "ca-app-pub-7647915106985195~9847131670")
 
@@ -55,7 +57,7 @@ class NewDetailsActivity : AppCompatActivity() {
                 val intent = Intent(Intent.ACTION_SEND)
                 intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                 intent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file))
-                intent.putExtra(Intent.EXTRA_TEXT, new.desc  + "\n"+ "تمت مشاركته من تطبيق Show Koora    ")
+                intent.putExtra(Intent.EXTRA_TEXT, new.desc + "\n" + "تمت مشاركته من تطبيق Show Koora    ")
                 intent.type = "image/png"
                 this.startActivity(Intent.createChooser(intent, "Share image via"))
             } catch (e: Exception) {

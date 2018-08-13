@@ -49,7 +49,7 @@ class Local_NewsFragment : Fragment(), newsAdapter.NewsClick {
 
         view.localnewsPB.visibility = View.VISIBLE
 
-        FirebaseDatabase.getInstance().getReference("WorldNews").addValueEventListener(object : ValueEventListener {
+        FirebaseDatabase.getInstance().getReference("CityNews").addValueEventListener(object : ValueEventListener {
 
             override fun onCancelled(p0: DatabaseError?) {
             }
