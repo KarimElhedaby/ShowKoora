@@ -7,6 +7,7 @@ import android.graphics.Color
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
+import com.google.android.gms.ads.MobileAds
 import com.onesignal.OneSignal
 import ka.com.showkoora.localnews.WorldNewsFragment
 import ka.com.showkoora.worldnews.Local_NewsFragment
@@ -19,6 +20,8 @@ open class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 //        supportActionBar?.setIcon(R.drawable.showkora)
 //        setSupportActionBar(toolbar)
+
+        MobileAds.initialize(this, getString(R.string.APP_INTIALIZE_ID))
 
         supportFragmentManager
                 .beginTransaction()
@@ -61,22 +64,8 @@ open class MainActivity : AppCompatActivity() {
             notificationManager.createNotificationChannel(notificationChannel2)
 
         }
-//
-//
-//        MobileAds.initialize(this, "ca-app-pub-7647915106985195~9847131670")
-//
-//        val adRequest = AdRequest.Builder().build()
-//        adViewV.loadAd(adRequest)
-//
 
-        /* WorldIV.setOnClickListener {
-             startActivity(Intent(this, WorldNewsFragment::class.java))
-         }
 
-         cityIV.setOnClickListener {
-             startActivity(Intent(this, Local_NewsFragment::class.java))
-
-         }*/
     }
 //
 //    override fun onCreateOptionsMenu(menu: Menu): Boolean {

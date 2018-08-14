@@ -35,7 +35,7 @@
     </string-array>
 
     <!-- Example settings for Data & Sync -->
-    <string name="pref_header_data_sync">المزامنه &amp; البيانات</string>
+    <string name="pref_header_data_sync">المزامنه و البيانات</string>
 
     <string name="pref_title_sync_frequency">التزامن</string>
     <string-array name="pref_sync_frequency_titles">
@@ -84,4 +84,9 @@
     <string name="notifications_admin_channel_name">Global channel</string>
     <string name="notifications_admin_channel_description">Notifications sent from the app admin</string>
     <string name="pref_title_vibrate">هزاز</string>
+
+
+    <string name="APP_INTIALIZE_ID">ca-app-pub-7647915106985195~9847131670</string>
+    <string name="FULL_SCREEN_AD_ID">ca-app-pub-7647915106985195/8269964734</string>
+    <string name="BANNER_AD_ID">ca-app-pub-7647915106985195/7253246598</string>
 </resources>

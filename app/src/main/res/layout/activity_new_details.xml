@@ -25,10 +25,10 @@
 
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/newTitleTV"
-            android:layout_marginLeft="19dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:layout_marginLeft="19dp"
             android:gravity="center"
             android:layoutDirection="ltr"
             android:padding="2dp"
@@ -102,11 +102,12 @@
 
         </android.support.v7.widget.CardView>
 
+
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/newDescTV"
-            android:layout_gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_margin="8dp"
             android:gravity="start"
             android:layoutDirection="ltr"
@@ -115,18 +116,17 @@
             android:textColor="#fff"
             android:textSize="18sp" />
 
-        <com.google.android.gms.ads.AdView
-            xmlns:ads="http://schemas.android.com/apk/res-auto"
+        <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
             android:id="@+id/adView"
-            android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|center"
             ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-7647915106985195/9319791713">
-        </com.google.android.gms.ads.AdView>
+            ads:adUnitId="@string/BANNER_AD_ID"></com.google.android.gms.ads.AdView>
 
 
     </LinearLayout>
+
+
 </ScrollView>

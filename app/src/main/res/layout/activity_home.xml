@@ -5,34 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
-    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
-    <!--xmlns:tools="http://schemas.android.com/tools"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:orientation="vertical"-->
-    <!--tools:context=".MainActivity">-->
-
-    <!--<android.support.v7.widget.Toolbar-->
-    <!--android:id="@+id/toolbar"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:background="@color/colorPrimary"-->
-    <!--app:popupTheme="@style/AppTheme.PopupOverlay"-->
-    <!--app:titleTextColor="#fff" />-->
-
-
-    <!--<com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"-->
-    <!--android:id="@+id/adViewV"-->
-    <!--android:layout_width="wrap_content"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_alignParentBottom="true"-->
-    <!--android:layout_centerHorizontal="true"-->
-    <!--android:layout_gravity="center"-->
-    <!--ads:adSize="BANNER"-->
-    <!--ads:adUnitId="ca-app-pub-7647915106985195/3777064265"></com.google.android.gms.ads.AdView>-->
-    <!--</LinearLayout>-->
-
     <FrameLayout
         android:id="@+id/cointainer"
         android:layout_width="match_parent"

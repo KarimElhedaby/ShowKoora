@@ -4,9 +4,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.GridLayoutManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.InterstitialAd
+import com.google.android.gms.ads.MobileAds
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
@@ -21,6 +25,9 @@ import kotlinx.android.synthetic.main.fragment_local__news.*
 
 class Local_NewsFragment : Fragment(), newsAdapter.NewsClick {
 
+    private lateinit var mInterstitialAd: InterstitialAd
+
+
     companion object {
         fun newInstance(): Local_NewsFragment {
             var fragment = Local_NewsFragment()
@@ -29,6 +36,11 @@ class Local_NewsFragment : Fragment(), newsAdapter.NewsClick {
     }
 
     override fun onNewsClickListener(new: New) {
+        if (mInterstitialAd.isLoaded) {
+            mInterstitialAd.show()
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.")
+        }
         var intent: Intent = Intent(activity, NewDetailsActivity::class.java)
         intent.putExtra("title", new.title)
         intent.putExtra("image", new.image)
@@ -49,7 +61,16 @@ class Local_NewsFragment : Fragment(), newsAdapter.NewsClick {
 
         view.localnewsPB.visibility = View.VISIBLE
 
+        MobileAds.initialize(context,getString(R.string.APP_INTIALIZE_ID))
+
+        mInterstitialAd = InterstitialAd(context)
+        mInterstitialAd.adUnitId = getString(R.string.FULL_SCREEN_AD_ID)
+
+        mInterstitialAd.loadAd(AdRequest.Builder().build())
+
+
         FirebaseDatabase.getInstance().getReference("CityNews").addValueEventListener(object : ValueEventListener {
+
 
             override fun onCancelled(p0: DatabaseError?) {
             }

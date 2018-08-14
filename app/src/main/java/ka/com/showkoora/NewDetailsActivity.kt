@@ -7,15 +7,19 @@ import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.View
 import com.bumptech.glide.Glide
 import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_new_details.*
 import java.io.File
 import java.io.FileOutputStream
 
 class NewDetailsActivity : AppCompatActivity() {
+
+    private lateinit var mInterstitialAd: InterstitialAd
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,7 +33,6 @@ class NewDetailsActivity : AppCompatActivity() {
 
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
-
 
         var new: New = New(intent.getStringExtra("title"),
                 intent.getStringExtra("date"),
